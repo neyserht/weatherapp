@@ -7,7 +7,10 @@ class WeatherApp extends Component {
         this.state = { temp: 0, desc: "", icon: "", loading: true }
     }
     componentDidMount(){
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=Lima&units=Metric&APIkey=7485ef5b995d1798c97109ab650c234c")
+
+        const token = "s";
+
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=Lima&units=Metric&APIkey="+token)
         .then(response => response.json())
         .then(responseData => {
             this.setState({
